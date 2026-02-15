@@ -3,6 +3,7 @@
 
 let subcommandDescriptions = [
     ["  adjust-accordion-padding", "Adjust accordion padding of the focused window's container"],
+    ["  append-layout", "Construct workspace tree from a JSON layout spec read from stdin"],
     ["  balance-sizes", "Balance sizes of all windows in the current workspace"],
     ["  close-all-windows-but-current", "On the focused workspace, close all windows but current"],
     ["  close", "Close the focused window"],
@@ -14,6 +15,7 @@ let subcommandDescriptions = [
     ["  focus-monitor", "Focus monitor by relative direction, by order, or by pattern"],
     ["  focus", "Set focus to a window."],
     ["  fullscreen", "Toggle the fullscreen mode for the focused window"],
+    ["  get-tree", "Print the tree of the focused workspace as JSON"],
     ["  join-with", "Put the focused window and the nearest node in the specified direction under a common parent container"],
     ["  layout", "Change layout of the focused window to the given layout"],
     ["  list-apps", "Print the list of running applications that appears in the Dock and may have a user interface"],
