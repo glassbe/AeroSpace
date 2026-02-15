@@ -4,6 +4,9 @@
 let adjust_accordion_padding_help_generated = """
     USAGE: adjust-accordion-padding [-h|--help] [--window-id <window-id>] [+|-]<number>
     """
+let append_layout_help_generated = """
+    USAGE: append-layout [-h|--help] [--workspace <workspace>]
+    """
 let balance_sizes_help_generated = """
     USAGE: balance-sizes [-h|--help] [--workspace <workspace>]
     """
@@ -50,6 +53,9 @@ let focus_help_generated = """
                  (dfs-next|dfs-prev)
        OR: focus [-h|--help] --window-id <window-id>
        OR: focus [-h|--help] --dfs-index <dfs-index>
+    """
+let get_tree_help_generated = """
+    USAGE: get-tree [-h|--help] [--workspace <workspace>]
     """
 let fullscreen_help_generated = """
     USAGE: fullscreen [-h|--help]     [--window-id <window-id>] [--no-outer-gaps]

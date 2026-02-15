@@ -2,6 +2,7 @@ public enum CmdKind: String, CaseIterable, Equatable, Sendable {
     // Sorted
 
     case adjustAccordionPadding = "adjust-accordion-padding"
+    case appendLayout = "append-layout"
     case balanceSizes = "balance-sizes"
     case close
     case closeAllWindowsButCurrent = "close-all-windows-but-current"
@@ -14,6 +15,7 @@ public enum CmdKind: String, CaseIterable, Equatable, Sendable {
     case focusBackAndForth = "focus-back-and-forth"
     case focusMonitor = "focus-monitor"
     case fullscreen
+    case getTree = "get-tree"
     case joinWith = "join-with"
     case layout
     case listApps = "list-apps"
@@ -47,6 +49,8 @@ func initSubcommands() -> [String: any SubCommandParserProtocol] {
         switch kind {
             case .adjustAccordionPadding:
                 result[kind.rawValue] = SubCommandParser(parseAdjustAccordionPaddingCmdArgs)
+            case .appendLayout:
+                result[kind.rawValue] = SubCommandParser(AppendLayoutCmdArgs.init)
             case .balanceSizes:
                 result[kind.rawValue] = SubCommandParser(BalanceSizesCmdArgs.init)
             case .close:
@@ -71,6 +75,8 @@ func initSubcommands() -> [String: any SubCommandParserProtocol] {
                 result[kind.rawValue] = SubCommandParser(parseFocusMonitorCmdArgs)
             case .fullscreen:
                 result[kind.rawValue] = SubCommandParser(parseFullscreenCmdArgs)
+            case .getTree:
+                result[kind.rawValue] = SubCommandParser(GetTreeCmdArgs.init)
             case .joinWith:
                 result[kind.rawValue] = SubCommandParser(JoinWithCmdArgs.init)
             case .layout:
